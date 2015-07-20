@@ -22,8 +22,8 @@ recipes:
 # development (rails)
 - sprout-rbenv
 - sprout-ruby
-- sprout-mysql
-- sprout-postgresql
+# - sprout-mysql
+# - sprout-postgresql
 
 # apps
 - sprout-osx-apps::iterm2
@@ -38,23 +38,18 @@ recipes:
 node_attributes:
   sprout:
     git:
-      domain: pivotallabs.com
+      domain: allstate.com
       authors:
-        - initials: ah
-          name: Abhijit Hiremagalur
-          username: abhi
-        - initials: bc
-          name: Brian Cunnie
-          username: cunnie
-        - initials: jrhb
-          name: Jonathan Barnes
-        - initials: lw
-          name: Luke Winikates
-          username: lwinikates
+        - initials: am
+          name: Alan Moran
+          username: bonzofenix
+        - initials: nv
+          name: Neil Vanegas
+          username: nvane
       projects:
         -
           name: sprout-wrap
-          url: https://github.com/pivotal-sprout/sprout-wrap.git
+          url: https://github.com/compozed/sprout-wrap.git
     terminal:
       default_profile: 'Pro'
     settings:
@@ -80,6 +75,7 @@ node_attributes:
         - watch
         - wget
         - rbenv-binstubs
+        - ack
         - rbenv-gem-rehash
       casks:
         - ccmenu
