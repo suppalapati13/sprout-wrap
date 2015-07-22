@@ -75,8 +75,9 @@ node_attributes:
         - watch
         - wget
         - rbenv-binstubs
-        - ack
         - rbenv-gem-rehash
+        - ack
+        - hub 
       casks:
         - ccmenu
         - firefox
