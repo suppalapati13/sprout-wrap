@@ -78,6 +78,8 @@ node_attributes:
         - rbenv-gem-rehash
         - ack
         - hub 
+        - gradle
+        - maven
       casks:
         - ccmenu
         - firefox
@@ -94,3 +96,4 @@ node_attributes:
         - xscope
         - screenhero
         - slack
+        - java
