@@ -79,6 +79,9 @@ node_attributes:
         - hub 
         - gradle
         - maven
+        - mysql
+        - redis
+        - rabbitmq
       casks:
         - ccmenu
         - firefox
@@ -97,3 +100,4 @@ node_attributes:
         - slack
         - java
         - intellij-idea
+        - appcode
