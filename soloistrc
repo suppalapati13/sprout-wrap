@@ -82,7 +82,7 @@ node_attributes:
         - mysql
         - redis
         - rabbitmq
-	- go
+        - go
       casks:
         - ccmenu
         - firefox
@@ -102,5 +102,5 @@ node_attributes:
         - java
         - intellij-idea
         - appcode
-	- dockertoolbox
-	- atom
+        - dockertoolbox
+        - atom
