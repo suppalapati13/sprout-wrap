@@ -39,9 +39,6 @@ node_attributes:
     git:
       domain: allstate.com
       authors:
-        - initials: am
-          name: Alan Moran
-          username: bonzofenix
         - initials: nv
           name: Neil Vanegas
           username: nvane
@@ -60,6 +57,8 @@ node_attributes:
       tile_size: 35
       magnification: false
     homebrew:
+      taps:
+        - git-duet/tap
       formulae:
         - ctags-exuberant
         - ag
@@ -83,6 +82,7 @@ node_attributes:
         - redis
         - rabbitmq
         - go
+        - git-duet
       casks:
         - ccmenu
         - firefox
