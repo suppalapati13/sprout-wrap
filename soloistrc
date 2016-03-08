@@ -17,7 +17,6 @@ recipes:
 - sprout-git
 - sprout-git::default_editor
 - sprout-git::projects
-- sprout-git::git_scripts
 
 # development (rails)
 - sprout-rbenv
@@ -36,19 +35,6 @@ recipes:
 
 node_attributes:
   sprout:
-    git:
-      domain: allstate.com
-      authors:
-        - initials: am
-          name: Alan Moran
-          username: bonzofenix
-        - initials: nv
-          name: Neil Vanegas
-          username: nvane
-      projects:
-        -
-          name: sprout-wrap
-          url: https://github.com/compozed/sprout-wrap.git
     terminal:
       default_profile: 'Pro'
     settings:
