@@ -69,6 +69,7 @@ node_attributes:
         - redis
         - rabbitmq
         - go
+        - jq
       casks:
         - ccmenu
         - firefox
