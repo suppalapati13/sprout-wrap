@@ -1,8 +1,24 @@
 language: objective-c
 rvm: system
+osx_image: xcode7.3
 install:
-  - travis_wait 'sudo softwareupdate -i -a'
-  - sudo gem install bundler --no-ri --no-rdoc
-  - sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle install
+  - rm -rf /usr/local/var/postgres # clear out Travis installed Postgres 9.4 data
+
+  # Travis is very behind on updates, so we must replace the softwareupdate
+  # binary with a script that exits quickly, otherwise the Travis build will
+  # time out.
+  - mkdir $HOME/bin
+  - printf '#!'"/usr/bin/env bash\necho 'Actual software update is overridden to allow Travis build to succeed. This can be removed when Travis OS X machine has been updated.'" > $HOME/bin/softwareupdate
+  - chmod +x $HOME/bin/softwareupdate
+
+  # We are testing installation of homebrew, so should uninstall everything
+  - brew cask list
+  - brew cask zap $(brew cask list)
+  - brew list
+  - brew uninstall --force $(brew list)
+  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+
+  # We are testing installation of Rubies, so should uninstall everything
+  - rvm implode --force
 script:
-  - soloist
+  - ./sprout

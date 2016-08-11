@@ -3,8 +3,14 @@ recipes:
 # base (required by sprout)
 - sprout-base
 - sprout-base::bash_it
-- sprout-base::homebrew
-- sprout-homebrew
+- homebrew
+- homebrew::install_taps
+- homebrew::install_formulas
+- homebrew::install_casks
+
+# apps
+- sprout-osx-apps::iterm2
+- sprout-osx-apps::shiftit
 
 # settings
 - sprout-osx-settings
@@ -21,20 +27,12 @@ recipes:
 # development (rails)
 - sprout-rbenv
 - sprout-ruby
-# - sprout-mysql
-# - sprout-postgresql
-
-# apps
-- sprout-osx-apps::iterm2
-- sprout-osx-apps::flycut
-- sprout-osx-apps::shiftit
-
-# apps (editors)
-- sprout-osx-apps::textmate_preferences
-- sprout-osx-apps::macvim
 
 node_attributes:
   sprout:
+    git:
+      domain: allstate.com
+      authors: []
     terminal:
       default_profile: 'Pro'
     settings:
@@ -45,49 +43,47 @@ node_attributes:
       clear_apps: true
       tile_size: 35
       magnification: false
-    homebrew:
-      formulae:
-        - ctags-exuberant
-        - ag
-        - chromedriver
-        - imagemagick
-        - node
-        - pstree
-        - qt
-        - ssh-copy-id
-        - tmux
-        - tree
-        - watch
-        - wget
-        - rbenv-binstubs
-        - rbenv-gem-rehash
-        - ack
-        - hub 
-        - gradle
-        - maven
-        - mysql
-        - redis
-        - rabbitmq
-        - go
-        - jq
-      casks:
-        - ccmenu
-        - firefox
-        - gitx-rowanj
-        - github
-        - google-chrome
-        - google-drive
-        - google-hangouts
-        - skype
-        - textmate
-        - vagrant
-        - virtualbox
-        - xquartz
-        - xscope
-        - screenhero
-        - slack
-        - java
-        - intellij-idea
-        - appcode
-        - dockertoolbox
-        - atom
+  homebrew:
+    taps:
+      - universal-ctags/universal-ctags
+    formulas:
+      - name: universal-ctags
+        head: true
+      - ag
+      - chromedriver
+      - imagemagick
+      - node
+      - pstree
+      - qt
+      - ssh-copy-id
+      - tmux
+      - tree
+      - watch
+      - wget
+      - rbenv-binstubs
+      - rbenv-gem-rehash
+      - ack
+      - hub 
+      - gradle
+      - maven
+      - mysql
+      - redis
+      - rabbitmq
+      - go
+      - jq
+    casks:
+      - firefox
+      - flycut
+      - rowanj-gitx
+      - google-chrome
+      - vagrant
+      - virtualbox
+      - xquartz
+      - xscope
+      - screenhero
+      - slack
+      - java
+      - intellij-idea
+      - appcode
+      - docker-for-mac
+      - atom

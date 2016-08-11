@@ -1,55 +1,64 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
-    build-essential (2.2.3)
-    dmg (2.2.2)
-    homebrew (1.12.0)
+    build-essential (3.2.0)
+      seven_zip (>= 0.0.0)
+    chef_handler (1.4.0)
+    dmg (2.4.0)
+    homebrew (2.1.0)
       build-essential (>= 2.1.2)
+    mingw (0.1.1)
+      seven_zip (>= 0.0.0)
+    seven_zip (2.0.1)
+      windows (>= 1.2.2)
+    windows (1.42.0)
+      chef_handler (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/osx
   ref: master
-  sha: 70ef029c8b25dbab5be2fb328b987297c05936db
+  sha: 57820f0c0f4b08e9cff82a57a7489f9dcc9345f7
   specs:
     osx (0.1.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-base
   ref: master
-  sha: cfac611a3515fe52e90d73403036403b487b1c33
+  sha: 689f8b6d2a679c076cf41e8fc7ab3cda9617d4fd
   specs:
-    sprout-base (0.2.0)
+    sprout-base (0.5.0)
+      homebrew (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-git
   ref: master
-  sha: f0eeca5b88aff2aaab05a3cc64795bef76198aae
+  sha: d50840b4510e5cdfda99bbbe04b9e3813176686c
   specs:
-    sprout-git (0.1.1)
+    sprout-git (0.2.1)
       homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-homebrew
   ref: master
-  sha: 67a6a6ba55d9d8e933645ae7fd1331b85b05d1d0
+  sha: 1d927c4fafd2c6f331f292375a6620099908a773
   specs:
-    sprout-homebrew (0.1.0)
-      homebrew (>= 1.5.4)
+    sprout-homebrew (0.3.0)
+      sprout-base (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-jetbrains-editors
   ref: master
-  sha: 727ea0aa532edabd478c70623991e4de3245cf86
+  sha: bcfcb62c1095a9ef33477f896ebda47918ad7618
   specs:
     sprout-jetbrains-editors (0.1.0)
+      homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
-      sprout-homebrew (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-mysql
   ref: master
-  sha: 7501fffff8a5c6e9237b295ab586595eeb2bb06e
+  sha: 12a264fe5418ae9fc6f5300fe56abec058f4a743
   specs:
     sprout-mysql (0.1.0)
       homebrew (>= 0.0.0)
@@ -58,9 +67,9 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-osx-apps
   ref: master
-  sha: 1407e20d95f5b859fdaddd03d30d578e3c061309
+  sha: 38899c86b2e841deb60fe5f9d3f294e73549f204
   specs:
-    sprout-osx-apps (0.1.0)
+    sprout-osx-apps (0.2.0)
       dmg (>= 0.0.0)
       homebrew (>= 1.6.6)
       sprout-base (>= 0.0.0)
@@ -69,7 +78,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-osx-settings
   ref: master
-  sha: 2470797e8997688b731928cc78f48e51c3562803
+  sha: 6e9b7100a450cb75a1f520bb8ec3db675b09a712
   specs:
     sprout-osx-settings (0.1.0)
       homebrew (>= 0.0.0)
@@ -79,7 +88,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-postgresql
   ref: master
-  sha: 4dda423c52414507123d084d3acee07f36d7ae94
+  sha: 97558d741bc7f0e1ea6c2f896dd2a3706b26c7ec
   specs:
     sprout-postgresql (0.1.0)
       homebrew (>= 1.5.4)
@@ -88,7 +97,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-rbenv
   ref: master
-  sha: 7436b84ac159c026961c66b7f96387755f554617
+  sha: ef38508a12ea3dfe06449ecbf82d98e7b75aeaa6
   specs:
     sprout-rbenv (0.1.0)
       homebrew (>= 0.0.0)
@@ -97,7 +106,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-ruby
   ref: master
-  sha: d6430744f515a2acce32580c03ba27e1fe0dea2e
+  sha: 2fc7d5273fccd978321450b61088bbd608867dfc
   specs:
     sprout-ruby (0.1.0)
       sprout-base (>= 0.0.0)
@@ -105,7 +114,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-ssh
   ref: master
-  sha: 062f1ad86f73cb91268d266a5bf634a04555cdda
+  sha: b3ac3a04d9b9494b32514e69b33720fd51f46224
   specs:
     sprout-ssh (0.1.0)
       sprout-base (>= 0.0.0)
@@ -114,13 +123,15 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-terminal
   ref: master
-  sha: d4fea8974b5f7b4b95d10971a899fce636ebd14e
+  sha: 6d9be928aa0041f455d3721b14c89c5e068f5e04
   specs:
     sprout-terminal (0.1.0)
       osx (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
 DEPENDENCIES
+  build-essential (= 3.2.0)
+  mingw (= 0.1.1)
   osx (>= 0)
   sprout-base (>= 0)
   sprout-git (>= 0)
