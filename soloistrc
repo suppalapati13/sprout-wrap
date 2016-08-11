@@ -85,5 +85,5 @@ node_attributes:
       - java
       - intellij-idea
       - appcode
-      - docker-for-mac
+      - dockertoolbox
       - atom
